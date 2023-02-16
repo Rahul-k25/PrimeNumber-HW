@@ -2,7 +2,7 @@ function primeNumber(){
     let m = parseInt(prompt("Enter the first number:"));
     let n = parseInt(prompt("Enter the second number:"));
 
-    while (isNaN(m) || isNaN(n) || m <= 1 || n <= 1) {
+    while (isNaN(m) || isNaN(n) || m <= 1 || n <= 1 || n % 1 !== 0) {
         alert("Both numbers should be integers greater than 1. Please try again.");
         m = parseInt(prompt("Enter the first number:"));
         n = parseInt(prompt("Enter the second number:"));
@@ -18,17 +18,17 @@ function primeNumber(){
             console.log(i);
         }
     }
+}
 
-    function isPrime(num) {
-        if (num < 2) {
-            return false;
-        }
-        for (let i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i === 0) {
-            return false;
-            }
-        }
-        return true;
+function isPrime(num) {
+    if (num < 2) {
+        return false;
     }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+        return false;
+        }
+    }
+    return true;
 }
 
